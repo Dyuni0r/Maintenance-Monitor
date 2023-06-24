@@ -23,6 +23,12 @@ public class MaintenanceRestController {
         return getOK();
     }
 
+    @RequestMapping("/api/message/reset")
+    public String resetMessage(){
+        message = "Everything works as expected";
+        return getOK();
+    }
+
     private String getOK(){
         return "ok";
     }
