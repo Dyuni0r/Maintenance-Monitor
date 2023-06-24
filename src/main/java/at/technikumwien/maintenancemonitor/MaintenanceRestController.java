@@ -17,6 +17,13 @@ public class MaintenanceRestController {
         //return message;
     }
 
+    @RequestMapping ("/api/message/set")
+    public String setNewMessage(@RequestParam String newMessage){
+        message = newMessage;
+        return getOK();
+    }
 
-
+    private String getOK(){
+        return "ok";
+    }
 }
