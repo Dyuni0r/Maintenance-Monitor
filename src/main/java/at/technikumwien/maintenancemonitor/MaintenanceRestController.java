@@ -9,14 +9,25 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class MaintenanceRestController {
 
-    String message = "Everything works as expected";
+    MaintenanceMonitor m = new MaintenanceMonitor();
 
     @RequestMapping("/api/message")
     public String getMessage(){
-        return message;
+        return m.getMessage();
         //return message;
     }
 
+    @RequestMapping ("/api/message/set")
+    public void setMessage(@RequestParam String message)
+    {
+        m.setMessage(message);
+    }
+
+    @RequestMapping("/api/message/reset")
+    public void resetMessage()
+    {
+        m.resetMessage();
+    }
 
 
 }
