@@ -9,6 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class MaintenanceRestController {
 
+    String message = "Everything works as expected";
+
+    @RequestMapping("/api/message")
+    public String getMessage(){
+        return message;
+        //return message;
+    }
+
 
 
 }
